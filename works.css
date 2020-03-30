@@ -1,0 +1,117 @@
+        #sec-projects{
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .project{
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            width: 80vw;
+            right: 0;
+            overflow: hidden;
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* >는 직계 자식을 의미 */
+        .project>div{
+            height: 25%;
+            position: relative;
+            transition: all .3s ease-in;
+
+            /* transition: box-shadow .3s ease-in; */
+        }
+
+        /* box shadow 효과 x y blur color*/ 
+        /* hover시 이미지 zoom in 효과 */
+        .project>div:hover{
+            box-shadow: 2px 3px 10px rgba(11,11,11,.3);
+            z-index: 10;
+
+            background-size: 103%;
+        }
+        .project>div:hover .wrap-text{
+            opacity: 1;
+        }
+        .project .wrap-text{
+            opacity: 0;
+            transition: opacity .3s ease-in;
+            position: absolute;   
+            bottom: 30px;
+            left: 30px;
+        }
+        
+        .wrap-text p{
+            font-family: "Apple SD Gothic Neo";
+            font-size: 14px;
+        }
+
+/* single or double */
+
+        .pf-x1{
+            width: 25%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            background-position: 50%;             /* 이걸 해줘야, 중심부터 zoom in hover효과적용 */
+        }
+        .pf-x1:after{
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+        .pf-x2{
+            width: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 50%;             /* 이걸 해줘야, 중심부터 zoom in hover효과적용 */
+        }
+        .pf-x2:after{
+            content: "";
+            display: block;
+            padding-bottom: 50%;
+        }
+
+        /* font */
+        .title{font-weight: 900;}
+
+/* Project 1: wave */
+        .p1_single1{background-image:url("src/works_thumbnail/wave_1.gif");}
+        .p1_single2{background-image:url("src/works_thumbnail/wave_2.jpg");}
+        .p1_double{background-image:url("src/works_thumbnail/wave_3.jpg");}
+
+/* Project 2: gradient */
+        .p2_single1{background-image:url("src/works_thumbnail/gradient_2.jpg");}
+        .p2_single2{background-image:url("src/works_thumbnail/gradient_3.jpg");}
+        .p2_double{background-image:url("src/works_thumbnail/gradient_1.jpg");}
+        
+/* Project 3: 졸업선물 */
+        .p3_single1{background-image:url("src/works_thumbnail/gg_2.jpg");}
+        .p3_single2{background-image:url("src/works_thumbnail/gg_3.jpg");}
+        .p3_double{background-image:url("src/works_thumbnail/gg_1.jpg");}   
+
+/* Project 4: Cafe UX */
+        .p4_single1{background-image:url("src/works_thumbnail/cafeux_1.jpg");}
+        .p4_single2{background-image:url("src/works_thumbnail/cafeux_2.jpg");}
+        .p4_double{background-image:url("src/works_thumbnail/cafeux_3.gif");}
+
+/* Proejct 5 */
+        .p5_single1{background-image:url("src/works_thumbnail/han_1.jpg");}
+        .p5_single2{background-image:url("src/works_thumbnail/han_2.jpg");}
+        .p5_single3{background-image:url("src/works_thumbnail/sap.jpg");}
+        .p5_single4{background-image:url("src/works_thumbnail/note.jpg");}
+
+        
+        /* @media screen and (max-width: 768px){
+            .pf-x1{
+                width: 50%;
+            }
+            .pf-x2{
+                width: 100%;
+            }
+        }    */

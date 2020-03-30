@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+    
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+
+/* texts 부분 */
+    .texts{
+        /* margin을 쓰면 horionztally center됨 */
+        top: 100px;
+        margin: auto;
+        width: 40vw;
+        height: 300px;
+
+        /* justify-content: center; */
+
+        /* border: 1px solid black; */
+        position: relative;
+
+    }
+
+    .wordcloud{
+        height: 100%;
+        position: relative;
+
+        margin-bottom: 20px;
+
+        /* background-image:url("src/about/profile.jpg"); */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .texts p{
+        font-family: "Apple SD Gothic Neo";
+        font-weight: 350;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .texts .wrap-btn{
+        width: 100%;
+
+        position: relative;
+    }
+
+    .texts a{
+        font-family: "Futura PT";
+        border: 1px solid black;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: absolute;
+        right: 0;
+    }
+
+/* 필요시 생기는 세로 사진 갤러리 */
+    .gallery{
+        /* make scrollable */
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
+        width: 120px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        right: 12vw;
+        top:0;
+
+        display: none;
+    }
+
+    /* hide scroll bar (chrome, firefox, explorer) */
+    .gallery::-webkit-scrollbar { width: 0 !important }
+    .gallery { overflow: -moz-scrollbars-none; }
+    .gallery { -ms-overflow-style: none; }
+
+    .gallery div{
+        right: 0px;
+
+        margin-bottom: 0px;
+    }
+
+    .gallery img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+/* gallery2 */
+    .gallery2{
+            /* make scrollable */
+            overflow-y: scroll;
+            overflow-x: hidden;
+            
+            width: 120px;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            position:fixed;
+            right: 12vw;
+            top:0;
+
+            display: none;
+        }
+
+        /* hide scroll bar (chrome, firefox, explorer) */
+        .gallery2::-webkit-scrollbar { width: 0 !important }
+        .gallery2 { overflow: -moz-scrollbars-none; }
+        .gallery2 { -ms-overflow-style: none; }
+
+        .gallery2 div{
+            right: 0px;
+
+            margin-bottom: 0px;
+        }
+
+        .gallery2 img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .wordcloud button{
+            position: absolute;
+            display:block;
+
+            font-family: "Apple SD Gothic Neo";
+            font-size: 20px;
+            font-weight: 600;
+            outline: none;
+            border:none;
+            opacity: .3;
+
+            padding: 10px;
+            /* letter-spacing: 5px; */
+
+            z-index: 10;
+
+            background-color: transparent;
+        }
+
+        .wordcloud button:hover{
+            opacity:1 !important;
+            /* transition: all .3s ease-in; */
+            /* font-weight: 600; */
+        }
+
+        /* transition */
+        button{
+            transition: all .2s ease-in;
+        }
+
+        /* main 둥실 효과 */
+        #b_main{
+        animation-name: main;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        }
+
+        @-webkit-keyframes main{
+            0%{
+                top: 125px;
+            }
+            100% {
+                top:135px;
+            }
+        }
+
+        /* 개별 위치 조정 */
+        #b_main{
+            top: 125px;
+            left: 25%;
+
+            font-size: 30px;
+            opacity: 1;
+        }
+
+        #b_yangon{
+            top: 50px;
+            left: 30%;
+        }
+
+        #b_sports{
+            top:80px;
+            right: 25%;
+        }
+        
+        #b_lbd{
+            bottom:80px;
+            right: 15%;
+        }
+        
+        #b_depsyn{
+            top:100px;
+            left: 50px;
+        }
+
+        #b_dataux{
+            bottom:100px;
+            left: 30px;
+        }
+
+        #b_inclusive{
+            bottom:50px;
+            left: 100px;
+        }
+
+        /*  */
+        #tip{
+            color:gray;
+            texts-align: right;
+        }
+
+    </style>
+
+    <script>
+        function displayMain() {document.getElementById("gallery").style.display ='none'; document.getElementById("gallery2").style.display ='none';
+        document.getElementById("tip").style.display='block';
+        document.getElementById("resume").style.display='block';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='.3';
+        document.getElementById("b_sports").style.opacity='.3';
+        document.getElementById("b_lbd").style.opacity='.3';
+        document.getElementById("b_depsyn").style.opacity='.3';
+        document.getElementById("b_dataux").style.opacity='.3';
+        document.getElementById("b_main").style.opacity='1';
+        document.getElementById("b_inclusive").style.opacity='.3';
+        document.getElementById("words").innerHTML="Hello, I’m yi-yujin.I strive to become a designer who knows what to do with data, so that I can bring meaning-ful, or yiyu-ful experience to people.";}
+
+        function displayYangon() {document.getElementById("gallery").style.display ='none'; document.getElementById("gallery2").style.display ='block';
+        document.getElementById("tip").style.display='none';
+        document.getElementById("resume").style.display='none';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='1';
+        document.getElementById("b_sports").style.opacity='.3';
+        document.getElementById("b_lbd").style.opacity='.3';
+        document.getElementById("b_depsyn").style.opacity='.3';
+        document.getElementById("b_dataux").style.opacity='.3';
+        document.getElementById("b_main").style.opacity='.3';
+        document.getElementById("b_inclusive").style.opacity='.3';
+        document.getElementById("words").innerHTML = "For seven and half years 2004-2011, I lived in Yangon and Tashkent where I could meet friends from diverse culture. Being in an international envrionment really helped me develop open mindedness as I could explore different ways of living and thinking. Thank you        Спасибо         ကျေးဇူးတင်ပါတယ်";}
+        
+        function displaySports() {document.getElementById("gallery").style.display ='block'; document.getElementById("gallery2").style.display ='none';
+        document.getElementById("tip").style.display='none';
+        document.getElementById("resume").style.display='none';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='.3';
+        document.getElementById("b_sports").style.opacity='1';
+        document.getElementById("b_lbd").style.opacity='.3';
+        document.getElementById("b_depsyn").style.opacity='.3';
+        document.getElementById("b_dataux").style.opacity='.3';
+        document.getElementById("b_main").style.opacity='.3';
+        document.getElementById("b_inclusive").style.opacity='.3';
+        document.getElementById("words").innerHTML = "I LOVE to play basketball and football. Since 4th grade, I have been playing on a basketball team, mainly as a shooting guard. Nothing beats the feeling of being a team. Sweating toward one goal together, lifting each other up, getting excited from all the overwhelming competitions… are just to name a few.";}
+        
+        function displayLBD() {document.getElementById("gallery").style.display ='none'; document.getElementById("gallery2").style.display ='none';
+        document.getElementById("tip").style.display='none';
+        document.getElementById("resume").style.display='none';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='.3';
+        document.getElementById("b_sports").style.opacity='.3';
+        document.getElementById("b_lbd").style.opacity='1';
+        document.getElementById("b_depsyn").style.opacity='.3';
+        document.getElementById("b_dataux").style.opacity='.3';
+        document.getElementById("b_main").style.opacity='.3';
+        document.getElementById("b_inclusive").style.opacity='.3';
+        document.getElementById("words").innerHTML = "During my internship at SAP AppHaus I could grow an attitude of a design thinker and ‘Learning by Doing’ is one powerful way to practice it. Prototyping is a culture. I believe the process of achieving fast and cheap failures with user testing can siginificantly imporve user experience.";}
+        
+        function displayDePsyn() {document.getElementById("gallery").style.display ='none'; document.getElementById("gallery2").style.display ='none';
+        document.getElementById("tip").style.display='none';
+        document.getElementById("resume").style.display='none';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='.3';
+        document.getElementById("b_sports").style.opacity='.3';
+        document.getElementById("b_lbd").style.opacity='.3';
+        document.getElementById("b_depsyn").style.opacity='1';
+        document.getElementById("b_dataux").style.opacity='.3';
+        document.getElementById("b_main").style.opacity='.3';
+        document.getElementById("b_inclusive").style.opacity='.3';
+        document.getElementById("words").innerHTML = "As I was studying design and psychology in college, I grew to love interacting with people: observing their behaviors, talking with them and listening to their problems. Psychology has strenghtened my curious attitude towards people while I spent time with students and professors who work hard to understand the human mind and behaviors and come up with explanations. Design has opened up a whole new world for me to actually carry out projects, where I could interact with real users from the very beginning til the end.";}
+        
+        function displayDataUX() {document.getElementById("gallery").style.display ='none'; document.getElementById("gallery2").style.display ='none';
+        document.getElementById("tip").style.display='none';
+        document.getElementById("resume").style.display='none';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='.3';
+        document.getElementById("b_sports").style.opacity='.3';
+        document.getElementById("b_lbd").style.opacity='.3';
+        document.getElementById("b_depsyn").style.opacity='.3';
+        document.getElementById("b_dataux").style.opacity='1';
+        document.getElementById("b_main").style.opacity='.3';
+        document.getElementById("b_inclusive").style.opacity='.3';
+        document.getElementById("words").innerHTML = "I work to practice Data UX, UX design with insights from data. By this I mean, I value the balance between quantitative and qualitative contents. I believe data can significantly improve the trust level of projects with the audience.";}
+
+        function displayInclusive() {document.getElementById("gallery").style.display ='none'; document.getElementById("gallery2").style.display ='none';
+        document.getElementById("tip").style.display='none';
+        document.getElementById("resume").style.display='none';
+        // button opacity
+        document.getElementById("b_yangon").style.opacity='.3';
+        document.getElementById("b_sports").style.opacity='.3';
+        document.getElementById("b_lbd").style.opacity='.3';
+        document.getElementById("b_depsyn").style.opacity='.3';
+        document.getElementById("b_dataux").style.opacity='.3';
+        document.getElementById("b_main").style.opacity='.3';
+        document.getElementById("b_inclusive").style.opacity='1';
+        document.getElementById("words").innerHTML = "Inclusive design";}
+
+    </script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works"><a href="works.html" id="works">Works</a></li>
+                <li class="about nav-active"><a href="about.html">about</a></li>
+                <li class="Lab"><a href="lab.html">Lab</a></li>
+                <li class="Library"><a href="library.html">Library</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="texts">
+        <div class="wordcloud" id="wordcloud">
+            <button type="button" id="b_main" onclick="displayMain()">Hello, I'm yi-yujin</button>
+            <button type="button" id="b_yangon" onclick="displayYangon()">Yangon Tashkent</button>
+            <button type="button" id="b_sports" onclick="displaySports()">Sports for life</button>
+            <button type="button" id="b_lbd" onclick="displayLBD()">Learning by Doing</button>
+            <button type="button" id="b_depsyn" onclick="displayDePsyn()">De-Psyn</button>
+            <button type="button" id="b_dataux" onclick="displayDataUX()">Data UX</button>
+            <button type="button" id="b_inclusive" onclick="displayInclusive()">Inclusive</button>
+        </div>
+
+        <div class="words">
+        <p id="words">
+            Hello, I’m yi-yujin.
+            <br><br>I strive to become a designer who knows what to do with data, so that I can bring meaning-ful, or yiyu-ful experience to people.
+            <br><br>
+            <p id="tip">—click on the words to learn more about me!</p><br>
+        </p>
+        </div>
+
+        <div class="wrap-btn" id="resume">
+            <a href="https://drive.google.com/open?id=1rBHlluyKDdGN_o47IMhdpTAGHA9S40Rm" target="_blank">RESUME</a>
+        </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <div class="a1"><img src="src/about/sports_for_life/01.jpg"></div>
+        <div class="a2"><img src="src/about/sports_for_life/02.jpg"></div>
+        <div class="a3"><img src="src/about/sports_for_life/03.jpg"></div>
+        <div class="a4"><img src="src/about/sports_for_life/04.jpg"></div>
+        <div class="a5"><img src="src/about/sports_for_life/05.jpg"></div>
+        <div class="a6"><img src="src/about/sports_for_life/06.jpg"></div>
+        <div class="a7"><img src="src/about/sports_for_life/07.jpg"></div>
+        <div class="a8"><img src="src/about/sports_for_life/08.jpg"></div>
+        <div class="a9"><img src="src/about/sports_for_life/09.jpg"></div>
+        <div class="a10"><img src="src/about/sports_for_life/010.jpg"></div>
+        <div class="a11"><img src="src/about/sports_for_life/011.jpg"></div>
+        <div class="a12"><img src="src/about/sports_for_life/012.jpg"></div>
+        <div class="a13"><img src="src/about/sports_for_life/013.jpg"></div>
+        <div class="a14"><img src="src/about/sports_for_life/014.jpg"></div>
+        <div class="a15"><img src="src/about/sports_for_life/015.jpg"></div>
+    </div>
+
+    <div class="gallery2" id="gallery2">
+        <div class="a1"><img src="src/about/yangon_tashkent/01.jpg"></div>
+        <div class="a2"><img src="src/about/yangon_tashkent/02.jpg"></div>
+        <div class="a3"><img src="src/about/yangon_tashkent/03.jpg"></div>
+        <div class="a4"><img src="src/about/yangon_tashkent/04.jpg"></div>
+        <div class="a5"><img src="src/about/yangon_tashkent/05.jpg"></div>
+        <div class="a6"><img src="src/about/yangon_tashkent/06.jpg"></div>
+        <div class="a7"><img src="src/about/yangon_tashkent/07.jpg"></div>
+        <div class="a8"><img src="src/about/yangon_tashkent/08.jpg"></div>
+        <div class="a9"><img src="src/about/yangon_tashkent/09.jpg"></div>
+        <div class="a10"><img src="src/about/yangon_tashkent/010.jpg"></div>
+        <div class="a11"><img src="src/about/yangon_tashkent/011.jpg"></div>
+    </div>
+
+    
+</body>

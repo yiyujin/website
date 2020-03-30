@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="works_projects.css">   
+    
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+
+
+    <script>
+        // 복붙 http://jsfiddle.net/4dgaurav/JqU2T/75/
+        $(document).ready(function () {
+        var divs = $('.container');
+        var dir = 'up'; // wheel scroll direction
+        var div = 0; // current div
+        $(document.body).on('DOMMouseScroll mousewheel', function (e) {
+            if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+                dir = 'down';
+            } else {
+                dir = 'up';
+            }
+            // find currently visible div :
+            div = -1;
+            divs.each(function(i){
+                if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
+                    div = i;
+                }
+            });
+            if (dir == 'up' && div > 0) {
+                div--;
+            }
+            if (dir == 'down' && div < divs.length) {
+                div++;
+            }
+            //console.log(div, dir, divs.length);
+            $('html,body').stop().animate({
+                scrollTop: divs.eq(div).offset().top
+            }, 200);
+            return false;
+        });
+        $(window).resize(function () {
+            $('html,body').scrollTop(divs.eq(div).offset().top);
+        });
+    });
+    </script>
+    
+    <!-- // change font weight of 'works' with scroll -->
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+        var works = $(".nav_intro");
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 10) {
+                works.removeClass('nav_intro').addClass("nav_intro-alt");
+            } else {
+                works.removeClass("nav_intro-alt").addClass('nav_intro');
+            }
+        });
+    });
+
+    $(function() {
+        var works = $(".nav_collect");
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 6200 ) {
+                works.removeClass('nav_collect').addClass("nav_collect-alt");
+            } else {
+                works.removeClass("nav_collect-alt").addClass('nav_collect');
+            }
+        });
+    });
+
+    $(function() {
+        var works = $(".nav_capture");
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 7000 ) {
+                works.removeClass('nav_capture').addClass("nav_capture-alt");
+            } else {
+                works.removeClass("nav_capture-alt").addClass('nav_capture');
+            }
+        });
+    });
+
+    $(function() {
+        var works = $(".nav_create");
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+        
+            if (scroll >= 8000 ) {
+                works.removeClass('nav_create').addClass("nav_create-alt");
+            } else {
+                works.removeClass("nav_create-alt").addClass('nav_create');
+            }
+        });
+    });
+    </script>
+
+    <style>
+    .nav_intro-alt,.nav_collect-alt,.nav_capture-alt,.nav_create-alt{
+        text-decoration: underline;
+    }
+    </style>
+
+    <!-- background image url -->
+    <style>
+    .mainimage{background-image: url('works/cafeux/main1.jpg');}
+    .sketch{background-image: url('works/cafeux/sketch.png');}
+
+    #sub1{background-image:url("works/cafeux/sub1.jpg");}
+    #sub2{background-image:url("works/cafeux/sub2.jpg");}
+    #space{background-image:url("works/cafeux/space.jpg");}
+    #sub3{background-image:url("works/cafeux/sub3.jpg");}
+    #sub4{background-image:url("works/cafeux/sub4.jpg");}
+    #sub5{background-image:url("works/cafeux/sub5.gif");}
+    #sub6{background-image:url("works/cafeux/sub6.jpg");}
+    #sub7{background-image:url("works/cafeux/sub7.jpg");}
+
+    #sub8{background-image:url("works/cafeux/sub8.jpg");}
+    #sub9{background-image:url("works/cafeux/sub9.gif");}
+    #sub10{background-image:url("works/cafeux/sub10.gif");}
+
+    /* collage */
+    #collect1{background-image: url("works/cafeux/collect1.jpg");}
+    #collect2{background-image: url("works/cafeux/collect2.jpg");}
+    #collect3{background-image: url("works/cafeux/collect3.jpg");}
+    #collect4{background-image: url("works/cafeux/collect4.jpg");}
+    #collect5{background-image: url("works/cafeux/collect5.jpg");}
+    #collect6{background-image: url("works/cafeux/collect6.jpg");}
+    #collect7{background-image: url("works/cafeux/collect7.jpg");}
+    #collect8{background-image: url("works/cafeux/collect8.jpg");}
+    #collect9{background-image: url("works/cafeux/collect9.jpg");}
+    #collect10{background-image: url("works/cafeux/collect10.jpg");}
+    #collect11{background-image: url("works/cafeux/collect11.jpg");}
+    #collect12{background-image: url("works/cafeux/collect12.jpg");}
+
+    #create1{background-image: url("works/cafeux/create1.jpg");}
+    #create2{background-image: url("works/cafeux/create2.jpg");}
+    #create3{background-image: url("works/cafeux/create3.jpg");}
+    #create4{background-image: url("works/cafeux/create4.jpg");}
+    #create5{background-image: url("works/cafeux/create5.jpg");}
+    #create6{background-image: url("works/cafeux/create6.jpg");}
+    
+    /* user */
+    .user{background-image: url("works/cafeux/user.png");}
+
+    .thankyou{background-image: url("works/cafeux/thankyou.gif");}
+
+    #outro{background-image: url("works/cafeux/outro.jpg");}
+
+    /* 추가 */
+    .apart{
+            margin-bottom: 50px;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works nav-active"><a href="works.html">Works</a></li>
+
+                <hr class="hr_w">
+
+                <li class="titleli">Cafe UX</li>
+                <div class="nav_detail_w">
+                    <li class="nav_intro"><a href="#intro">?!</a></li>
+                    <li class="nav_collect"><a href="#collect">Collect data</a></li>
+                    <li class="nav_capture"><a href="#capture">Capture insight</a></li>
+                    <li class="nav_create"><a href="#create">Create experience</a></li>                    
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <div class="all">
+        <div class="alls">
+            <div class="main">
+                <div class="mainimage"></div>
+            </div>
+
+    <!-- brief text -->
+            <div class="brieftext large">
+                <p class="bold">Cafe UX 카공족을 위한 카페 디자인</p>
+                <p class="light">cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- intro -->
+            <div class="intro" id="intro">
+                <div class="problem"><p class="bold">?</p><br>Lorem ipsum dolor sit amet re distinctio, veritatis repellat quae iste, eveniet vero vitae sunt reiciendis facilis ipsum! Illo id, eaque accusamus sequi distinctio cumque dolore ut!</div>
+                <div class="solution"><p class="bold">!</p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus est labore quos corrupti earum at in vero incidunt illum sapiente sed iure voluptate, reprehenderit quas provident pariatur. Doloribus, nobis.</div>
+                <div class="sketch"></div>
+            </div>
+
+    <!-- sub1 -->
+            <div class="sub middle" id="sub1">
+                <div class="dummy"></div>        
+            </div>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- sub2 -->
+            <div class="sub middle apart" id="sub2">
+                <div class="dummy"></div>
+            </div>
+
+    <!-- space -->
+            <div class="sub large apart" id="space">
+                <div class="dummy"></div>
+            </div>
+
+    <!-- sub3-7 -->
+            <div class="sub middle" id="sub3">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="sub middle" id="sub4">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="sub middle" id="sub5">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="sub middle" id="sub6">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="sub middle apart" id="sub7">
+                <div class="dummy"></div>
+            </div>
+
+    <!-- 의자 -->
+            <div class="sub middle" id="sub8">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+            <div class="sub middle" id="sub9">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="sub middle" id="sub10">
+                <div class="dummy"></div>
+            </div>
+
+    <!-- ccc -->
+            <div class="ccc">
+    <!-- collect data -->
+                <div class="ccctxt" id="collect">
+                    <p class="bold" id="collect">Collect data</p>
+                    <p class="light">cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>
+                </div>  
+
+                <div class="collage">
+                        <div id="collect1"></div>
+                        <div id="collect2"></div>
+                        <div id="collect3"></div>
+                </div>
+                <div class="collage">
+                    <div id="collect4"></div>
+                    <div id="collect5"></div>
+                    <div id="collect6"></div>
+                </div>
+                <div class="collage">
+                    <div id="collect7"></div>
+                    <div id="collect8"></div>
+                    <div id="collect9"></div>
+                </div>
+                <div class="collage">
+                    <div id="collect10"></div>
+                    <div id="collect11"></div>
+                    <div id="collect12"></div>
+                </div>
+
+    <!-- capture insight -->
+                <div class="ccctxt">
+                    <p class="bold" id="capture">Capture insight</p>
+                    <p class="light">cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>     
+                </div>  
+
+                <div class="frame"></div>
+
+    <!-- quote box -->
+                <div class="quotebox">
+                    <p id="quote">사용자가 "감수해야죠"라고 말하는 부분에 집중하기<br>
+                        <br>I believe that it is a designer's role to give cusomters more than they explicitly ask for,
+                        <br>and a way to do that is to pay attention to the painpoints that the user 'bears with'. 
+                    </p>
+                </div>
+
+    <!-- create experience -->
+                <div class="ccctxt">
+                    <p class="bold" id="create">Create experience</p>
+                    <p class="light">cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        cafeux is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>     
+                </div>  
+
+                <div class="collage">
+                    <div id="create1"></div>
+                    <div id="create2"></div>
+                    <div id="create3"></div>
+                </div>
+                <div class="collage">
+                    <div id="create4"></div>
+                    <div id="create5"></div>
+                    <div id="create6"></div>
+                </div>
+            </div>
+
+            <!-- thank you gif -->
+            <div class="thankyoubox">
+                <div class="thankyou"></div>
+                <div id="usertext">thanks for watching!</div>
+            </div>
+
+            <!-- outro -->
+            <div class="sub large" id="outro">
+                <div class="dummy_outro">
+                    <p class="outrotxt">Project: cafeux, a speaker for everyone
+                        <br>Period: mar 2017 - mar 2018
+                        <br>Team: Yi-Yujin, Kim-Taeil
+                        <br>Role: UX research, interview, product modeling and rendering, branding
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

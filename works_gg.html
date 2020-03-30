@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="works_projects.css">    
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+
+    <script ></script>
+
+    <script>
+        function displayOne() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb1.jpg)';
+            document.getElementById("thumb1").style.opacity='1';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+        }
+
+        function displayTwo() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb2.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='1';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayThree() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb3.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='1';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayFour() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb4.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='1';
+            }
+    </script>
+
+    <!-- background image url -->
+    <style>
+    .mainimage{background-image: url('works/gg/main1.gif');}
+    .sketch{background-image: url('works/gg/sketch.png');}
+
+    #sub1{background-image:url("works/gg/sub1.jpg");}
+    #sub2{background-image:url("works/gg/sub2.jpg");}
+    #sub3{background-image:url("works/gg/sub3.jpg");}
+    #sub4{background-image:url("works/gg/sub4.jpg");}
+    #sub5{background-image:url("works/gg/sub5.jpg");}
+
+    .gallerymain{background-image:url("works/gg/thumb1.jpg");}
+    .thumb1{background-image:url("works/gg/thumb1.jpg");}
+    .thumb2{background-image:url("works/gg/thumb2.jpg");}
+    .thumb3{background-image:url("works/gg/thumb3.jpg");}
+    .thumb4{background-image:url("works/gg/thumb4.jpg");}
+
+    /* collage */
+    #collect1{background-image: url("works/gg/collect1.jpg");}
+    #collect2{background-image: url("works/gg/collect2.jpg");}
+    #collect3{background-image: url("works/gg/collect3.jpg");}
+    #collect4{background-image: url("works/gg/collect4.jpg");}
+    #collect5{background-image: url("works/gg/collect5.jpg");}
+    #collect6{background-image: url("works/gg/collect6.jpg");}
+
+    #frame1{background-image: url("works/gg/create.jpg");}
+
+    #create1{background-image: url("works/gg/create1.jpg");}
+    #create2{background-image: url("works/gg/create2.jpg");}
+    #create3{background-image: url("works/gg/create3.jpg");}
+    #create4{background-image: url("works/gg/create4.jpg");}
+    #create5{background-image: url("works/gg/create5.jpg");}
+    #create6{background-image: url("works/gg/create6.jpg");}
+    #create7{background-image: url("works/gg/create7.jpg"); background-size: 80% !important;}
+    #create8{background-image: url("works/gg/create8.jpg"); background-size: 80% !important;}
+    #create9{background-image: url("works/gg/create9.jpg"); background-size: 50% !important;}
+    
+    /* user */
+    .user{background-image: url("works/gg/user.png");}
+
+    .thankyou{background-image: url("works/gg/thankyou.gif"); background-size: 80% !important;}
+
+    #outro{background-image: url("works/gg/outro.jpg");}
+
+    /* 추가 */
+    .dummy1{padding-top: 300% !important;}
+    .dummy2{padding-top: 180% !important;}
+
+    </style>
+
+
+<script>
+    // 복붙 http://jsfiddle.net/4dgaurav/JqU2T/75/
+    $(document).ready(function () {
+    var divs = $('.container');
+    var dir = 'up'; // wheel scroll direction
+    var div = 0; // current div
+    $(document.body).on('DOMMouseScroll mousewheel', function (e) {
+        if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+            dir = 'down';
+        } else {
+            dir = 'up';
+        }
+        // find currently visible div :
+        div = -1;
+        divs.each(function(i){
+            if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
+                div = i;
+            }
+        });
+        if (dir == 'up' && div > 0) {
+            div--;
+        }
+        if (dir == 'down' && div < divs.length) {
+            div++;
+        }
+        //console.log(div, dir, divs.length);
+        $('html,body').stop().animate({
+            scrollTop: divs.eq(div).offset().top
+        }, 200);
+        return false;
+    });
+    $(window).resize(function () {
+        $('html,body').scrollTop(divs.eq(div).offset().top);
+    });
+});
+</script>
+
+<!-- // change font weight of 'works' with scroll -->
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $(function() {
+    var works = $(".nav_intro");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 10) {
+            works.removeClass('nav_intro').addClass("nav_intro-alt");
+        } else {
+            works.removeClass("nav_intro-alt").addClass('nav_intro');
+        }
+    });
+});
+
+$(function() {
+    var works = $(".nav_collect");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 4000 ) {
+            works.removeClass('nav_collect').addClass("nav_collect-alt");
+        } else {
+            works.removeClass("nav_collect-alt").addClass('nav_collect');
+        }
+    });
+});
+
+$(function() {
+    var works = $(".nav_capture");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 4600 ) {
+            works.removeClass('nav_capture').addClass("nav_capture-alt");
+        } else {
+            works.removeClass("nav_capture-alt").addClass('nav_capture');
+        }
+    });
+});
+
+$(function() {
+    var works = $(".nav_create");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 5200 ) {
+            works.removeClass('nav_create').addClass("nav_create-alt");
+        } else {
+            works.removeClass("nav_create-alt").addClass('nav_create');
+        }
+    });
+});
+</script>
+
+<style>
+    .nav_intro-alt,.nav_collect-alt,.nav_capture-alt,.nav_create-alt{
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works nav-active"><a href="works.html">Works</a></li>
+
+                <hr class="hr_w">
+
+                <li class="titleli">gg 접근성지도</li>
+                <div class="nav_detail_w">
+                    <li class="nav_intro"><a href="#intro">?!</a></li>
+                    <li class="nav_collect"><a href="#collect">Collect data</a></li>
+                    <li class="nav_capture"><a href="#capture">Capture insight</a></li>
+                    <li class="nav_create"><a href="#create">Create experience</a></li>                    
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <div class="all">
+        <div class="alls">
+            <div class="main">
+                <div class="mainimage"></div>
+            </div>
+
+    <!-- brief text -->
+            <div class="brieftext large">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- intro -->
+            <div class="intro" id="intro">
+                <div class="problem"><p class="bold">?</p><br>Lorem ipsum dolor sit amet re distinctio, veritatis repellat quae iste, eveniet vero vitae sunt reiciendis facilis ipsum! Illo id, eaque accusamus sequi distinctio cumque dolore ut!</div>
+                <div class="solution"><p class="bold">!</p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus est labore quos corrupti earum at in vero incidunt illum sapiente sed iure voluptate, reprehenderit quas provident pariatur. Doloribus, nobis.</div>
+                <div class="sketch"></div>
+            </div>
+
+    <!-- sub1 -->
+            <div class="sub large" id="sub1">
+                <div class="dummy1"></div>        
+            </div>
+
+    <!-- video -->
+            <iframe class="sub large video" src="https://www.youtube.com/embed/5uYAyQywheU" controls>
+                <div class="dummy"></div>
+            </iframe>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- sub2 -->
+            <div class="sub large" id="sub2">
+                <div class="dummy2"></div>
+            </div>
+
+
+    <!-- ccc -->
+            <div class="ccc">
+    <!-- collect data -->
+                <div class="ccctxt" id="collect">
+                    <p class="bold" id="collect">Collect data</p>
+                    <p class="light">gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>
+                </div>  
+
+                <div class="collage">
+                    <div id="collect1"></div>
+                    <div id="collect2"></div>
+                    <div id="collect3"></div>
+                </div>
+                <div class="collage">
+                    <div id="collect4"></div>
+                    <div id="collect5"></div>
+                    <div id="collect6"></div>
+                </div>
+
+    <!-- capture insight -->
+                <div class="ccctxt">
+                    <p class="bold" id="capture">Capture insight</p>
+                    <p class="light">gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>     
+                </div>  
+
+                <div class="frame"></div>
+
+    <!-- quote box -->
+                <div class="quotebox">
+                    <p id="quote">You Are What You Read.
+                    </p>
+                </div>
+
+    <!-- create experience -->
+                <div class="ccctxt">
+                    <p class="bold" id="create">Create experience</p>
+                    <p class="light">gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        gg is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>     
+                </div>  
+
+                <div class="frame" id="frame1"></div>
+
+                <div class="collage">
+                    <div id="create1"></div>
+                    <div id="create2"></div>
+                    <div id="create3"></div>
+                </div>
+
+                <!-- 건물앱 개발 ing 컨셉이미지 -->
+                <div class="frame" id="frame2">폰 이미지</div>
+
+            </div>
+
+            <!-- user voice -->
+            <!-- <div class="userbox">
+                <div class="user"></div>
+                <div id="usertext">letter excerpt from one of our users</div>
+            </div> -->
+
+            <!-- thank you gif -->
+            <div class="thankyoubox">
+                <div class="thankyou"></div>
+                <div id="usertext">thanks for watching!</div>
+            </div>
+
+            <!-- outro -->
+            <div class="sub large" id="outro">
+                <div class="dummy_outro">
+                    <p class="outrotxt">Project: gg, a speaker for everyone
+                        <br>Period: mar 2017 - mar 2018
+                        <br>Team: Yi-Yujin, Kim-Taeil
+                        <br>Role: UX research, interview, product modeling and rendering, branding
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

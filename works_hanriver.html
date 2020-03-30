@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="works_projects.css">    
+   
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+
+    <script ></script>
+
+    <script>
+        function displayOne() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/한강지하철지도/thumb1.jpg)';
+            document.getElementById("thumb1").style.opacity='1';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+        }
+
+        function displayTwo() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/한강지하철지도/thumb2.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='1';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayThree() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/한강지하철지도/thumb3.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='1';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayFour() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/한강지하철지도/thumb4.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='1';
+            }
+    </script>
+
+    <!-- background image url -->
+    <style>
+    .mainimage{background-image: url('works/한강지하철지도/main1.jpg');}
+
+    #sub1{background-image:url("works/한강지하철지도/sub1.jpg");}
+    #sub2{background-image:url("works/한강지하철지도/sub2.jpg");}
+    #sub3{background-image:url("works/한강지하철지도/sub3.jpg");}
+    #sub4{background-image:url("works/한강지하철지도/sub4.jpg");}
+
+    .gallerymain{background-image:url("works/한강지하철지도/thumb1.jpg");}
+    .thumb1{background-image:url("works/한강지하철지도/thumb1.jpg");}
+    .thumb2{background-image:url("works/한강지하철지도/thumb2.jpg");}
+    .thumb3{background-image:url("works/한강지하철지도/thumb3.jpg");}
+    .thumb4{background-image:url("works/한강지하철지도/thumb4.jpg");}
+    
+    /* user */
+    .thankyou{background-image: url("works/한강지하철지도/thankyou.gif");}
+
+    .outrotxt{color: #3d3d3d !important; padding-top: 5% !important;}
+
+    /* 추가 */
+    .sub{
+        margin-bottom: 50px !important;
+        background-size: contain !important;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works nav-active"><a href="works.html">Works</a></li>
+
+                <hr class="hr_w">
+
+                <li class="titleli">한강지하철지도</li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <div class="all">
+        <div class="alls">
+            <div class="main">
+                <div class="mainimage"></div>
+            </div>
+
+    <!-- brief text -->
+            <div class="brieftext large">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">한강지하철지도 is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- sub1 -->
+            <div class="sub middle" id="sub1">
+                <div class="dummy"></div>        
+            </div>
+
+    <!-- sub2 -->
+            <div class="sub middle" id="sub2">
+                <div class="dummy"></div>
+            </div>
+    
+    <!-- gallery -->
+            <div class="gallery">
+                <div class="gallerymain" id="gallerymain">
+                    <div class="dummy"></div>
+                </div>
+                <div class="thumbnail">
+                    <div class="thumb1" id="thumb1" onclick="displayOne()"></div>
+                    <div class="thumb2" id="thumb2" onclick="displayTwo()"></div>
+                    <div class="thumb3" id="thumb3" onclick="displayThree()"></div>
+                    <div class="thumb4" id="thumb4" onclick="displayFour()"></div>
+                </div>
+            </div>
+
+    <!-- sub3 -->
+            <div class="sub middle" id="sub3">
+                <div class="dummy"></div>
+            </div>
+
+    <!-- sub4 -->
+            <div class="sub middle" id="sub4">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="sub middle" id="outrotxt">
+                <div class="dummy outrotxt">Project: 한강지하철지도<br>personal work<br>personal work</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

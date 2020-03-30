@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+    
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+    p{
+        font-family: "Apple SD Gothic Neo";
+        font-size: 12px;
+
+        display: inline;
+        position: absolute;
+        /* border: 1px solid black; */
+    }
+
+    .box{
+        position:relative;
+
+        margin:auto;
+
+        width: 40vw;
+        height: 500px;
+
+        top:100px;
+        
+        /* border: 1px solid black; */
+    }
+
+    .p1{
+        display: block;
+
+        margin: auto;
+        margin-top: 100px;
+
+        width: 320px;
+        height: 180px;
+
+        /* border: 1px solid black; */
+        background-size: cover;
+        background-position: center;
+        background-image: url("src/lab.gif");
+    }
+    
+    /* 개별 위치 조정 */
+
+    .one{left: 10%;}
+    .two{left: 70%;}
+    .three{left: 5%;}
+    .four{left: 30%;}
+
+    /*  */
+    .one{
+        animation-name: one;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @-webkit-keyframes one{
+        0%{
+            top: 20px;
+        }
+        100% {
+            top:30px;
+        }
+    }
+
+    .two{
+        animation-name: two;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @-webkit-keyframes two{
+        0%{
+            top: 100px;
+        }
+        100% {
+            top:130px;
+        }
+    }
+
+    .three{
+        animation-name: three;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @-webkit-keyframes three{
+        0%{
+            top: 300px;
+        }
+        100% {
+            top:320px;
+        }
+    }
+
+    .four{
+        animation-name: four;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @-webkit-keyframes four{
+        0%{
+            top: 400px;
+        }
+        100% {
+            top:420px;
+        }
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works"><a href="works.html" id="works">Works</a></li>
+                <li class="about"><a href="about.html">about</a></li>
+                <li class="Lab nav-active"><a href="lab.html">Lab</a></li>
+                <li class="Library"><a href="library.html">Library</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box">
+        <div class="p1"></div>
+        
+        <p class="one">입양매칭 서비스<br>어떻게 하면 유기동물 입양을 현실적으로 도울 수 있을까?</p>
+        <p class="two">you are what you listen to/Memories Player(가제)<br>어떻게 하면 사용자가 음악데이터로 자기 이해를 넓힐 수 있을까?</p>
+        <p class="three">Lyrics Player<br>가사 중심 음악 경험 서비스, music for everyone</p>    
+        <p class="four">Book Cover Curation<br>'don't judge by the book cover' only emphasizes that we do</p>    
+    </div>
+
+</body>

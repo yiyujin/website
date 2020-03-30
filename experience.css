@@ -1,0 +1,8 @@
+    @media only screen and (max-width:640px) {
+    /* experience */
+    .texte{display: none !important;}
+    .quote{font-size: 10px !important; line-height: 20px !important;}
+
+    .single, .single-alt{width:50% !important;}
+    .double, .double-alt{width:100% !important;}
+    }

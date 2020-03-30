@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title_lib" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+        .project ul{
+        }
+
+        .blogs li{
+            list-style: none; 
+
+            background-size: cover;
+            background-position: center;
+            box-sizing:border-box;
+            border-top: solid 10px #FAFAFA;
+            /* border-left: solid 80px #FAFAFA; */
+        }
+
+        .lists{
+            width: 100%;
+            border-top: solid 10px #FAFAFA;
+            /* border-left: solid 80px #FAFAFA; */
+
+            position:absolute;
+            width: 75vw;
+            right: 0;
+            top:150px;
+        }
+
+        .lists{
+            column-count: 4;
+        }
+
+        .lists div{
+            width: 100%;
+        }
+
+        /* font sizes */
+        .contents p{
+            font-size: 12px;
+            line-height: 18px;
+            color: black;
+        }
+
+        #sec-project{
+            position: relative;
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* fix */
+        .fix{
+            position:absolute;
+            width: 75vw;
+            height:100px;
+            right: 0;
+            
+            border-top: solid 10px #FAFAFA;
+
+            column-count: 4;
+
+            border-bottom: solid 1px black;
+        }
+
+        .fix div{
+            width:100%;
+            height:100px;
+
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* 커버사진 */
+        .quote1{background-image: url("https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fbec45f46-f118-4689-b414-8df0a562a029%2F10.jpg?table=block&id=1fa5210d-4a3d-415f-80cd-df9b71353f65&width=1600&cache=v2");}
+        .quote2{background-image: url("https://img.washingtonpost.com/rf/image_480w/WashingtonPost/Content/Production/Blogs/celebritology/Images/Dartmouth_Graduation_04433.jpg?uuid=dU9QgpXNEeCXnGqg3-kxqg");}
+
+        .bold{
+            font-size: 12px;
+            font-family: "Gmarket Sans TTF" !important;
+        }
+
+        .quotep p{
+            margin: 10px;
+        }
+
+        /*  */
+        .nav_detail{
+            text-align: right;
+        }
+        .nav_detail a{
+            font-size: 10px;
+        }
+
+        /* text_lib */
+        .text_lib{
+            box-sizing: content-box;
+            /* 영어폰트 앞, 안되는 걸 뒤에 두면 한국어는 명조로 표현됨 */
+            font-size: 14px;
+            line-height: 16px;
+
+            font-family: "Adobe Caslon", "JejuMyeongjo";
+        }
+
+        .quotehashtag{
+            font-size: 9px !important;
+            color: #D3D3D3!important;
+            font-family: "Adobe Caslon", "JejuMyeongjo";
+        }
+
+        .hashtags{
+            font-size: 10px !important;
+            color: red !important;
+        }
+
+        .title_lib{
+            font-size: 16px;
+            line-height: normal;
+            font-weight: 400;
+            padding-bottom: 5px;
+
+            font-family: "Gmarket Sans TTF" !important;
+        }
+
+        .subtitle_lib{
+            font-size: 12px;
+        }
+
+        .lists img{
+            width: 100%;
+        }
+
+        .lists div{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+
+<!-- <script src="library.js"></script> -->
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works"><a href="works.html">Works</a></li>
+                <li class="about"><a href="about.html">about</a></li>
+                <li class="Lab"><a href="lab.html">Lab</a></li>
+                <li class="Library nav-active"><a href="library.html">Library</a></li>
+
+                <div class="nav_detail">
+                    <li class="indirect nav-active"><a href="library.html">indirect<br>eXperience</a></li>
+                    <li class="experience"><a href="library_experience.html">eXperience</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+<!-- fix -->
+
+<!-- contents -->
+    <div id="sec-project">
+        <div class="project">
+            <!-- fix -->
+                <div class="fix">
+                        <a href="https://www.notion.so/Let-s-Learn-from-Characters-55370df5f3ab452185cdf340db93cca2" target="blank"><div class="quote1"></div></a>                        
+                        <div class="quotep"><p class="bold">👩‍🚀 Top Story<br><br>Let's Learn from Characters!</p>
+                            <p class="quotehashtag">updated Mar 5 2020</p></div>
+                        <a href="https://www.youtube.com/watch?v=srS_OrHmOC4" target="blank"><div class="quote2"></div></a>                     
+                        <div class="quotep"><p class="bold">☕ Latte of the Week<br><br>"through disappointment you gain clarity and with clarity comes conviction and true originality"</p>
+                            <p class="quotehashtag">updated Mar 5 2020</p></div>
+                </div>
+
+                <ul class="blogs">
+                    <li class="lists">
+                        <!-- 여기 계속 추가 -->
+                        <!-- post 10 -->
+                        <div>
+                            <a href="https://www.notion.so/Let-s-Learn-from-Characters-55370df5f3ab452185cdf340db93cca2" target="_blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fbec45f46-f118-4689-b414-8df0a562a029%2F10.jpg?table=block&id=1fa5210d-4a3d-415f-80cd-df9b71353f65&width=1600&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#thinking</p>
+                                <p class="title_lib">Let's Learn from Characters!</p>
+                                <p class="subtitle_lib">Mar 2019~<br>캐릭터에게 한 가지씩만 배워도, 엄청난 일이 아닐까?</p>
+                                </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 7 -->
+                        <div>
+                            <a href="https://www.notion.so/pxd-story-posts-3599ede9a1a44f11991275d5e912a7e3" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F38a2508e-70ee-4796-b819-af1e1846232e%2FUntitled.png?table=block&id=4e8e5464-9b4d-4e3a-a161-13c02020eb46&width=2430&cache=v2"></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#study</p>
+                                <p class="title_lib">pxd story posts 필기</p>
+                                <p class="subtitle_lib">May 2019~<br>
+                                    국내 탑 ux디자인 에이전시가 들려주는 이야기 듣고 필기한 내용입니다.</p>
+                            </div>
+                        </div>
+
+                        <hr>   
+                
+                        <!-- post 9 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/after-reading-the-best-interface-is-no-interface-by-golden-krishna-12795ea9b2ec" target="blank">
+                                <img src="https://miro.medium.com/max/12000/0*aGNc-OhJONB-yKKv" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">After reading 'The Best Interface is No Interface' by Golden Krishna</p>
+                                <p class="subtitle_lib">Jan 9, 2020<br>
+                                Think outside the Screen Box! 네모를 경멸하는 크리슈나. 디자인할 때 네모부터 그리고 있다면 필독할만한 책입니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 8 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%ED%9E%88%EC%82%AC%EC%9D%B4%EC%8B%9C%EC%A1%B0-hisaishi-joe%EC%9D%98-%EB%82%98%EB%8A%94-%EB%A7%A4%EC%9D%BC-%EA%B0%90%EB%8F%99%EC%9D%84-%EB%A7%8C%EB%82%98%EA%B3%A0-%EC%8B%B6%EB%8B%A4%EB%A5%BC-%EC%9D%BD%EA%B3%A0-ee6106af8e44" target="blank">
+                                <img src="https://miro.medium.com/max/4384/1*OXRXFMF6UxsgEbmnJIIQeQ.png" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">히사이시조 Hisaishi Joe의 ‘나는 매일 감동을 만나고 싶다’를 읽고</p>
+                                <p class="subtitle_lib">Jan 10, 2020<br>
+                                히사이시조는 디자이너이다. Hisaishi Joe is a Designer.<br>"나는 작곡가이다. 작곡가의 기본 명제는 ‘좋은 곡을 만드는 것’이다. 누군가 “작곡가로서 가장 중요하게 여기는 것이 무엇입니까?”라고 묻는다면 나는 잠시도 망설이지 않고 “계속 곡을 쓰는 것입니다”라고 대답할 것이다."
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 7 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/after-reading-achievement-habit-by-bernard-roth-7af2cebfe6ea" target="blank">
+                                <img src="https://miro.medium.com/max/2848/1*rXSwGUhSVIPF5XWtXBYcGg.png"></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">After reading ‘Achievement Habit’ by Bernard Roth</p>
+                                <p class="subtitle_lib">Jan 7, 2020<br>
+                                    From this book, I’ve decided to: 1. Be a Doer, not a Talker (be Nike!) 2. Keep asking questions to find the REAL problem.
+                                    3. Believe in the magic of language: Talk in ‘Yes, And’, not ‘Yes, But’, Replace ‘have to’ with ‘want to’, never interfere others, be an Active Listener.
+                                    4. Always remember that I’m in full control of my world.</p>
+                            </div>
+                        </div>
+
+                        <hr>                     
+
+                        <!-- post 7 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%EC%9D%B4%EB%A6%84%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-lets-talk-about-names-8e4f61d80c67" target="blank">
+                                <img src="https://miro.medium.com/max/1330/0*yfy60UZkGm0aHtlC"></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#thinking</p>
+                                <p class="title_lib">이름에 대하여 Let's talk about Names</p>
+                                <p class="subtitle_lib">Mar 7, 2020<br>
+                                    이름은 그 사람을 특별하게 만든다. 0. 개인적인 경험에서 비롯된 이름에 대한 생각들
+                                    1. 영화에서 비롯된 이름에 대한 생각들
+                                    2. 이름에 대한 생각 실천하기</p>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <!-- post 7 -->
+                        <div>
+                            <a href="https://www.notion.so/Data-UX-8f0bb512606e461fad118c49b5c019e3" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcc9bd83e-70d0-4bf5-bdbc-6329faac32af%2FUntitled.png?table=block&id=dd6541eb-961b-4c97-9482-a9af711d2c2b&width=1940&cache=v2"></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#project</p>
+                                <p class="title_lib">Data UX: 졸업선물 프로젝트</p>
+                                <p class="subtitle_lib">Jan 5, 2020<br>
+                                    Data Ux, why data, why python, 정량 후 정성, interview, final product</p>
+                            </div>
+                        </div>
+
+                        <hr>       
+                        
+                        <!-- post 7 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%EC%B7%A8%EC%97%85%EC%A4%80%EB%B9%84%EC%83%9D%EC%9D%B4-%EB%B3%B4%EB%A9%B4-%EC%A2%8B%EC%9D%84-%EC%98%81%ED%99%94-%EB%A7%88%EB%85%80%EB%B0%B0%EB%8B%AC%EB%B6%80-%ED%82%A4%ED%82%A4-160150715a30" target="blank">
+                                <img src="https://miro.medium.com/max/1398/0*IPfHkjPytTY1ZOBW.png"></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#thinking</p>
+                                <p class="title_lib">취업준비생이 보면 좋을 영화 ‘마녀배달부 키키</p>
+                                <p class="subtitle_lib">Mar 9, 2020<br>
+                                    마녀배달부 키키 (魔女の宅急便, Kiki’s Delivery Service)는 1989년 지브리 스튜디오 미야자키 하야오 감독 작품으로 판타지 동화 속에 지극히 현실적인 이야기를 담은 영화이다. 취업준비생 관점으로 영화를 이해하니, 이입과 공감도가 깊어지면서 감동이 배가 되었다. 영화에서 나오는 설정들을 현실세계에 대입하며 곱씹어보았다.</p>
+                            </div>
+                        </div>
+
+                        <hr>                         
+
+                        <!-- post 6 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%EB%8F%99%EB%AC%BC%EC%97%90%EA%B2%8C%EC%84%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%82%B4%EC%95%84%EA%B0%80%EB%8A%94-%EB%B0%A9%EB%B2%95-%EB%AC%B8%EC%A0%9C%EB%8A%94-%EB%AC%B4%EA%B8%B0%EB%A0%A5%EC%9D%B4%EB%8B%A4%EB%A5%BC-%EC%9D%BD%EA%B3%A0-f3f5ca589115" target="blank">
+                                <img src="https://miro.medium.com/max/5200/0*HXwyWPMCegxF1qWq" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">동물에게서 배우는 살아가는 방법 ('문제는 무기력이다'를 읽고)</p>
+                                <p class="subtitle_lib">Nov 30, 2019<br>
+                                고슴도치의 유능감, 투우 소의 카렌시아, 독수리의 갱생, 낙타와 사자
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 5 -->
+                        <div>
+                            <a href="https://www.notion.so/1987-f957f0bdab9844c58c91edfd67b3041d" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd0bb4cc4-673a-469e-93aa-dc0d66f34194%2FScreen_Shot_2019-12-20_at_9.34.47_PM.png?table=block&id=9157828a-e227-48a5-9ca0-cb03a918570a&width=1480&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">'노르웨이의 숲'을 읽고 (무라카미 하루키, 1987)</p>
+                                <p class="subtitle_lib">Dec 20, 2019<br>
+                                노르웨이의 숲을 읽고 내게 남은 두가지 키워드는 '불완전'과 '죽음'이다.<br>
+                            
+                            </p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 4 -->
+                        <div>
+                            <a href="https://www.notion.so/Happy-Birthday-Dad-my-Idol-47df0260f267462581a5d3427adff718" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7b4158b0-1562-4e6f-b2c2-fe7bfb57fed5%2FUntitled.png?table=block&id=e1ce3eab-d10b-4847-aa89-50203ae0ec12&width=1340&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#project</p>
+                                <p class="title_lib">Happy Birthday Dad, my Idol</p>
+                                <p class="subtitle_lib">Feb 23, 2020<br>
+                                    For this year, I decided to 'make something' for my Dad's birthday. I found out recently that my dad is very much into 'Cosmos' documentary by Car Sagan. He watches it over and over on television on Sunday mornings. My dad told me he wants to study astronomy after he retires. I was amazed. There was always a little spaceboy within him.                                   
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 3 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/1%EB%93%B1-%EA%B8%B0%EC%97%85%EC%9D%98-%EA%B4%91%EA%B3%A0-2%EB%93%B1-%EA%B8%B0%EC%97%85%EC%9D%98-%EA%B4%91%EA%B3%A0%EB%A5%BC-%EC%9D%BD%EA%B3%A0-%EC%9D%B4%EC%88%98%EC%9B%90-%ED%98%84-tbwa-ceo-2014-52565120d8c0" target="blank">
+                                <img src="https://miro.medium.com/max/1600/1*4EnKvFXjsM48G1_OxJ1DYQ.jpeg" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">'1등 기업의 광고 2등 기업의 광고'를 읽고 (이수원 현 TBWA CEO, 2014)</p>
+                                <p class="subtitle_lib">Jan 26, 2020<br>
+                                    저자는 독자에게 '광고바보'가 되지 말라며, 두 개의 날개 (기획과 디자인)로 일하는것이 중요하다고 이야기한다. 또한 자신이 1등인지, 2등인지에 따라 마케팅 전략을 달리해야한다.
+                                    이외에도 기획자/디자이너로서 명심해야할 것들에 대한 이야기가 잘 담겨있는 책이다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr>
+                    
+                        <!-- post -->
+                        <div>
+                            <a href="https://www.notion.so/Psychological-Design-Terms-exaplained-with-Real-Life-Examples-aa253a21632144b0889aff56b0d00bb9" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb1a66db7-b23f-422c-add2-da7c888ccf22%2F1.jpg?table=block&id=d29e3be4-9c0f-44e0-885b-8b9227951ff3&width=1600&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#thinking</p>
+                                <p class="title_lib">심리학/디자인 개념들 일상생활 예시로 쉽게 이해하기</p>
+                                <p class="subtitle_lib">Mar 2020~<br>
+                                    Hawthorne Effect is when people act differently when they know they are being watched. 효리네 민박을 비롯한 수많은 관찰 예능에서 호손 효과를 예상할 수 있다. 고로 TV에 나오는 사람들을 지나치게 부러워하고 선망하지 않는 것이 좋다는 개인적인 생각이다. 매체에 나오는 이야기는 모두 '편집본'이다.</p>
+                            </div>
+                        </div>                        
+
+                        <hr>
+
+                        <!-- post 2 -->
+                        <div>
+                            <a href="https://www.notion.so/Fundamentals-of-Data-Viz-e636c7d7e9ca4ab6947aa2a2c01aff5f" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3396e1f2-86a8-4bd8-9b26-179492cee716%2FUntitled.png?table=block&id=8cfaf24a-121e-4f6f-b43a-c441ca4e2006&width=480&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#study</p>
+                                <p class="title_lib">Fundamentals of Data Visualization 데이터 시각화 교과서</p>
+                                <p class="subtitle_lib">Dec 4, 2019<br>
+                                "figures will typically carry the weight of your arguments" 설득력을 기르기 위해 data viz가 필요하다.</p>
+                            </div>
+                        </div>
+
+                        <hr>
+                        
+                        <!-- post 1 -->
+                        <div>
+                            <a href="https://www.notion.so/Beautiful-Evidence-by-Edward-Tufte-3547045f2c5d4a0da13b458a8629e4a3" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9be6a2e1-4e6c-4135-895a-536e6df69d65%2F2.jpg?table=block&id=3ae4a488-6d33-44a9-b85b-edfb2a890824&width=1600&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#study</p>
+                                <p class="title_lib">Beautiful Evidence by Edward Tufte</p>
+                                <p class="subtitle_lib">Nov 23, 2019<br>
+                                그렇다. 갈릴레오 갈릴레이는 짱이었던 것이다. 데이터시각화의 아빠로 불리우는 터프티 책 정리내용이다. 핵심은 Integraiton of Words and Images. 다양한 형태의 정보를 한 데 잘 어울리게 배치하는 것이 정보전달에 효과적이다.</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 1 -->
+                        <div>
+                            <a href="https://www.notion.so/Hisaishi-Joe-web-design-ed0bc37fda7b4fafafebdc7f940eb59e" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4371bfdd-d163-44b0-bc57-8f8e166e40ff%2F.jpg?table=block&id=82914866-9848-420d-9a79-29bea767eefc&width=7680&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#project</p>
+                                <p class="title_lib">Hisaishi Joe web design</p>
+                                <p class="subtitle_lib">Jan 11, 2020<br>
+                                    After reading Hisaishi Joe's book, I wanted to make something about him while practicing web development. The purpose of this web design practice is to provide a platform where the user can discover Hisaishi Joe; mainly his music (theme songs for Ghibli animations) and his quotes. </p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post 1 -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%EC%9E%90%EC%B7%A8%EB%B0%A9%EC%98%81%ED%99%94%EA%B4%80-jcbc-e611f3127ca6" target="blank">
+                                <img src="https://miro.medium.com/max/2560/0*FVKPs25WrojYRhXL.png" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#story</p>
+                                <p class="title_lib">자취방 영화관 jcbc</p>
+                                <p class="subtitle_lib">Feb 25, 2019<br>
+                                    매주 토요일 영화와 사람과<br>
+                                    올해 3월, 자취방영화관을 개업했다. 장시간 머리구석 생각을 드디어 실행에 옮긴 것이다. 매주 토요일 저녁 이벤트로, 사전에 영화주제 공지를 올리고 참여 신청을 받고 있다. 이 이벤트를 하는 이유에는 크게 3가지가 있다.
+                                    1. 영화를 보고 싶다.
+                                    2. 친구를 보고 싶다.
+                                    3. 기획/디자인 연습을 하고 싶다.</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- post -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%EB%AF%B8%EC%A7%80%EA%B7%BC%ED%95%9C-%EC%BB%A4%ED%94%BC%EC%99%80-%EB%9F%B0%EB%8D%98-%EC%8B%A0%ED%98%B8%EB%93%B1-%ED%8F%AC%EC%96%B4%EC%82%AC%EC%9D%B4%ED%8A%B8-%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0-foresight-creator%EB%A5%BC-%EC%9D%BD%EA%B3%A0-by-%EC%9D%B4%EB%8F%88%ED%83%9C-e85e07c0341b" target="blank">
+                                <img src="https://miro.medium.com/max/1600/0*XAtVhMD9csG06TEu.jpg" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">미지근한 커피와 런던 신호등 (이돈태의 '포어사이트 크리에이터'를 읽고)</p>
+                                <p class="subtitle_lib">Jan, 2018<br>
+                                    국제적 경험이 풍부한 이돈태 디자이너는 Total Design을 이야기한다. 이돈태의 경험을 엿보며 앞으로 사회생활을 하면서 어떤 애티튜드를 가져야 좋을 지에 대해서 고민해보았다.</p>
+                            </div>
+                        </div>
+                        
+                        <hr>
+
+                        <!-- post -->
+                        <div>
+                            <!-- <a href="" target="blank"> -->
+                                <img src="https://cdn-images-1.medium.com/max/1600/1*7Ly0rDQn4brKou6_Q-6XDg.png" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">'The Big Book of Dashboards'를 읽고</p>
+                                <p class="subtitle_lib">Feb 25, 2020<br>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <hr>
+
+                        <!-- post -->
+                        <div>
+                            <a href="https://medium.com/@yiyu.design/%EA%B3%B5%EA%B0%84%EC%9D%80-%EA%B2%BD%ED%97%98%EC%9D%B4%EB%8B%A4%EB%A5%BC-%EC%9D%BD%EA%B3%A0-%EC%9D%B4%EC%8A%B9%EC%9C%A4-%EB%94%94%EC%A7%80%ED%84%B8-%EB%AC%B8%ED%99%94%EC%8B%AC%EB%A6%AC%ED%95%99%EC%9E%90-6342d9fadeb0" target="blank">
+                                <img src="https://miro.medium.com/max/2500/0*nvA9yyALp2EHbSwb.jpg" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#book review</p>
+                                <p class="title_lib">'공간은 경험이다'를 읽고</p>
+                                <p class="subtitle_lib">Dec 10, 2019<br>
+                                이미 대부분 카페는 커피를 마시는 공간 이상의 휴식공간이 되어준다. 그런데 맥심 플랜트는 이것을 넘어서 고객에게 공감각이라는 새로운 경험을 제공한다. 간단한 UI를 통해 고객이 데이터를 입력하면, 추천 커피 원두와 이와 어울리는 음악, 시, 구절 등 라이프스타일 정보를 예쁜 카드에 담아 선물한다. 이러한 재미있고 감성적인 인터랙션을 통해 고객은 경험욕구를 채우고 회사는 자연스럽게 데이터를 모을 수 있으니 일석이조이다...</p>
+                            </div>
+                        </div>    
+
+                        <hr>
+                        
+                        <!-- post -->
+                        <div>
+                            <a href="https://www.notion.so/python-personal-stackflow-84fd3c23825c4401af00d0a4cc9ff34b" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fee87fa5c-58d6-4d31-a017-ab352717d912%2FUntitled.png?table=block&id=c98847a4-5e76-4b74-b43f-6e5f80756a0d&width=4500&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#study</p>
+                                <p class="title_lib">-html, css, javascript- personal stackflow</p>
+                                <p class="subtitle_lib">Dec 2019~<br>
+                                I am keeping a record of coding issues instead of googling it everytime.
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr>
+                        
+                        <!-- post -->
+                        <div>
+                            <a href="https://www.notion.so/python-personal-stackflow-84fd3c23825c4401af00d0a4cc9ff34b" target="blank">
+                                <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fffa48c91-d2a5-4bcc-a7cb-410a71d8819b%2FUntitled.png?table=block&id=3335c70f-efd8-4f44-b21c-c2d9d4cc09dd&width=4500&cache=v2" alt=""></a>
+                            <div class="text_lib">
+                                <p class="hashtags">#study</p>
+                                <p class="title_lib">-python-<br>personal stackflow</p>
+                                <p class="subtitle_lib">Dec 2019~<br>
+                                I am keeping a record of coding issues instead of googling it everytime.
+                                </p>
+                            </div>
+                        </div>
+
+                        
+                    </li>
+                </ul>
+        </div>
+    </section>
+
+</body>
+
+</html>

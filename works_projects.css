@@ -1,0 +1,249 @@
+        html{
+            font-family: "Apple SD Gothic Neo";
+            color: #3D3D3D;
+            font-size: 14px;
+        }
+
+        p{
+            font-family: "Apple SD Gothic Neo";
+            font-weight: 400;
+        }
+
+        .bold{
+            font-weight: 900;
+        }
+
+        /* nav */
+        .nav_detail_w{
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .nav_detail_w a{
+            font-size: 10px;
+        }
+
+        .titleli{
+            font-size:1rem;
+            font-weight: 900;
+            color:#3D3D3D;
+        }
+
+        hr{
+           margin: 10px;
+        }
+
+        /*  */
+        .all{
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing:border-box;
+        }
+
+        .alls{
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            width: 78vw;
+            right: 0;
+
+            overflow: hidden;
+            box-sizing:border-box;
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .alls div{
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Main Image*/
+        .main{
+            display: inline-block;
+            width: 100%;
+        }
+
+        .mainimage{
+            padding-top:44%;
+        }
+
+        /* breiftext */
+        .brieftext{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .brieftext p{display: inline;}
+
+        /* Sub Image */
+        .sub{
+            display: inline-block;
+        }
+
+        .dummy{
+            padding-top:55%;
+        }
+
+        .middle{
+            display: inline-block;
+            width: 85%;
+        }
+
+        .large{
+            width: 100%;
+        }
+
+        /* gallery */
+        .gallery{
+            width: 100%;
+            /* height: 580px; */
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .gallerymain{width:85%;}
+
+        .thumbnail{
+            width:15%;
+            height:100%;
+            right:0;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>div{
+            width:100%;
+            height: 25%;
+        }
+
+        .thumbnail>div:hover{
+            opacity: 1 !important;
+            transition: all .1s ease-in-out;
+        }
+
+        .thumb1{opacity:1}
+        .thumb2, .thumb3, .thumb4{opacity: .3;}
+
+        /* video */
+        .video{
+            height: 600px !important;
+        }
+
+        /* ccc */
+        .ccc{
+            background-color: #EBEBEB;
+            width: 100%;
+            height: 100%;
+
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .ccctxt{
+            width: 80%;
+            margin: 50px;
+        }
+
+        /* collage */
+        .collage{
+            display: flex;
+            flex-direction: row;
+
+            width: 85%;
+            height: 218px;
+        }
+
+        .collage>div{
+            width: 33.3%;
+            height: inherit;
+        }
+
+        /* capture */
+        .frame{
+            width: 85%;
+            height: 456px;
+
+            background-color: white;
+        }
+
+        /* quote box */
+        .quotebox{
+            width: 100%;
+            text-align: center;
+            height: 100px;
+
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        #quote{
+            display: inline;
+            color:black;
+            margin: auto;
+            background-color: white;
+
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            font-weight: 200;
+            letter-spacing: 3px;
+
+        }
+
+        /* user */
+        .userbox{width:100%;}
+        .userbox>div{margin:auto; text-align: center; font-size: 10px !important;}
+        .user{width: 50%; height: 200px; background-size: contain !important; background-repeat: no-repeat;}
+
+        /* thankyou */
+        .thankyoubox{width:100%;}
+        .thankyoubox>div{margin:auto; text-align: center; font-size: 10px !important;}
+
+        .thankyou{
+            width: 300px;
+            height: 300px;
+            }
+
+        .dummy_outro{
+            padding-top:30%;
+        }
+
+        .outrotxt{
+            left: 20px;
+            bottom:10px;
+            width: 25%;
+            color: white;
+            line-height: 20px;
+            position:absolute;
+        }
+
+        #outro{
+            margin-top: 50px;
+        }
+
+        /* intro */
+        .intro{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            width: 100%;
+        }
+
+        .problem, .solution, .sketch{
+            display: inline;
+            width: 200px;
+            max-height: 200px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* More */
+        .more{position: absolute; right:50px; text-align: right; font-size: 12px !important;}

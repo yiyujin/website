@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="works_projects.css">    
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+
+    <script ></script>
+
+    <script>
+        function displayOne() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wave/thumb1.jpg)';
+            document.getElementById("thumb1").style.opacity='1';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+        }
+
+        function displayTwo() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wave/thumb2.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='1';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayThree() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wave/thumb3.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='1';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayFour() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wave/thumb4.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='1';
+            }
+    </script>
+
+    <!-- background image url -->
+    <style>
+    .mainimage{background-image: url('works/wave/main1.jpg');}
+    .sketch{background-image: url('works/wave/sketch.png');}
+
+    #sub1{background-image:url("works/wave/main2.jpg");}
+    #sub2{background-image:url("works/wave/main3.jpg");}
+    #sub3{background-image:url("works/wave/main4.jpg");}
+    #sub4{background-image:url("works/wave/main5.jpg");}
+    #sub5{background-image:url("works/wave/main6.jpg");}
+
+    .gallerymain{background-image:url("works/wave/thumb1.jpg");}
+    .thumb1{background-image:url("works/wave/thumb1.jpg");}
+    .thumb2{background-image:url("works/wave/thumb2.jpg");}
+    .thumb3{background-image:url("works/wave/thumb3.jpg");}
+    .thumb4{background-image:url("works/wave/thumb4.jpg");}
+
+    /* collage */
+    #collect1{background-image: url("works/wave/collect1.jpg");}
+    #collect2{background-image: url("works/wave/collect2.gif");}
+    #collect3{background-image: url("works/wave/collect3.jpg");}
+    #collect4{background-image: url("works/wave/collect4.gif");}
+    #collect5{background-image: url("works/wave/collect5.jpg");}
+    #collect6{background-image: url("works/wave/collect6.jpg");}
+
+    #create1{background-image: url("works/wave/create1.gif");}
+    #create2{background-image: url("works/wave/create2.jpg");}
+    #create3{background-image: url("works/wave/create3.jpg");}
+    #create4{background-image: url("works/wave/create4.jpg");}
+    #create5{background-image: url("works/wave/create5.jpg");}
+    #create6{background-image: url("works/wave/create6.gif"); background-size: 120% !important;}
+    #create7{background-image: url("works/wave/create7.jpg");}
+    #create8{background-image: url("works/wave/create8.gif");}
+    #create9{background-image: url("works/wave/create9.jpg");}
+    
+    /* user */
+    .user{background-image: url("works/wave/user.png");}
+
+    .thankyou{background-image: url("works/wave/thankyou.gif");}
+
+    #outro{background-image: url("works/wave/outro.jpg");}
+
+    #frame2{background-image: url("works/wave/main6.jpg"); height: 654px !important;}
+    </style>
+
+
+<script>
+    // 복붙 http://jsfiddle.net/4dgaurav/JqU2T/75/
+    $(document).ready(function () {
+    var divs = $('.container');
+    var dir = 'up'; // wheel scroll direction
+    var div = 0; // current div
+    $(document.body).on('DOMMouseScroll mousewheel', function (e) {
+        if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+            dir = 'down';
+        } else {
+            dir = 'up';
+        }
+        // find currently visible div :
+        div = -1;
+        divs.each(function(i){
+            if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
+                div = i;
+            }
+        });
+        if (dir == 'up' && div > 0) {
+            div--;
+        }
+        if (dir == 'down' && div < divs.length) {
+            div++;
+        }
+        //console.log(div, dir, divs.length);
+        $('html,body').stop().animate({
+            scrollTop: divs.eq(div).offset().top
+        }, 200);
+        return false;
+    });
+    $(window).resize(function () {
+        $('html,body').scrollTop(divs.eq(div).offset().top);
+    });
+});
+</script>
+
+<!-- // change font weight of 'works' with scroll -->
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $(function() {
+    var works = $(".nav_intro");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 10) {
+            works.removeClass('nav_intro').addClass("nav_intro-alt");
+        } else {
+            works.removeClass("nav_intro-alt").addClass('nav_intro');
+        }
+    });
+});
+
+$(function() {
+    var works = $(".nav_collect");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 4000 ) {
+            works.removeClass('nav_collect').addClass("nav_collect-alt");
+        } else {
+            works.removeClass("nav_collect-alt").addClass('nav_collect');
+        }
+    });
+});
+
+$(function() {
+    var works = $(".nav_capture");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 4600 ) {
+            works.removeClass('nav_capture').addClass("nav_capture-alt");
+        } else {
+            works.removeClass("nav_capture-alt").addClass('nav_capture');
+        }
+    });
+});
+
+$(function() {
+    var works = $(".nav_create");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 5200 ) {
+            works.removeClass('nav_create').addClass("nav_create-alt");
+        } else {
+            works.removeClass("nav_create-alt").addClass('nav_create');
+        }
+    });
+});
+</script>
+
+<style>
+    .nav_intro-alt,.nav_collect-alt,.nav_capture-alt,.nav_create-alt{
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works nav-active"><a href="works.html">Works</a></li>
+
+                <hr class="hr_w">
+
+                <li class="titleli">wave</li>
+                <div class="nav_detail_w">
+                    <li class="nav_intro"><a href="#intro">?!</a></li>
+                    <li class="nav_collect"><a href="#collect">Collect data</a></li>
+                    <li class="nav_capture"><a href="#capture">Capture insight</a></li>
+                    <li class="nav_create"><a href="#create">Create experience</a></li>                    
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <div class="all">
+        <div class="alls">
+            <div class="main">
+                <div class="mainimage"></div>
+            </div>
+
+    <!-- brief text -->
+            <div class="brieftext large">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- intro -->
+            <div class="intro" id="intro">
+                <div class="problem"><p class="bold">?</p><br>Lorem ipsum dolor sit amet re distinctio, veritatis repellat quae iste, eveniet vero vitae sunt reiciendis facilis ipsum! Illo id, eaque accusamus sequi distinctio cumque dolore ut!</div>
+                <div class="solution"><p class="bold">!</p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus est labore quos corrupti earum at in vero incidunt illum sapiente sed iure voluptate, reprehenderit quas provident pariatur. Doloribus, nobis.</div>
+                <div class="sketch"></div>
+                <div class="more">특허 등록 2019.07.22<br><br>경기콘텐츠진흥원 아이디어융합<br>제품디자인 우수팀<br><br>디자인코리아 출품 2017<br><br>고려대학교 디자인조형학부<br>졸업전시전 2017 최우수팀</div>
+            </div>
+
+    <!-- sub1 -->
+            <div class="sub middle" id="sub1">
+                <div class="dummy"></div>        
+            </div>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- sub2 -->
+            <div class="sub middle" id="sub2">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- sub3 -->
+            <div class="sub middle" id="sub3">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+
+    <!-- sub4 -->
+            <div class="sub middle" id="sub4">
+                <div class="dummy"></div>
+            </div>
+
+            <div class="brieftext middle">
+                <p class="bold">음악을 보고 듣고 만지다.</p>
+                <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.</p>       
+            </div>
+    
+    <!-- gallery -->
+            <div class="gallery">
+                <div class="gallerymain" id="gallerymain">
+                    <div class="dummy"></div>
+                </div>
+                <div class="thumbnail">
+                    <div class="thumb1" id="thumb1" onclick="displayOne()"></div>
+                    <div class="thumb2" id="thumb2" onclick="displayTwo()"></div>
+                    <div class="thumb3" id="thumb3" onclick="displayThree()"></div>
+                    <div class="thumb4" id="thumb4" onclick="displayFour()"></div>
+                </div>
+            </div>
+
+    <!-- video -->
+            <iframe class="sub large video" src="https://www.youtube.com/embed/USimZjTJEp0" controls>
+                <div class="dummy"></div>
+            </iframe>
+
+    <!-- ccc -->
+            <div class="ccc">
+    <!-- collect data -->
+                <div class="ccctxt" id="collect">
+                    <p class="bold" id="collect">Collect data</p>
+                    <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>
+                </div>  
+
+                <div class="collage">
+                        <div id="collect1"></div>
+                        <div id="collect2"></div>
+                        <div id="collect3"></div>
+                </div>
+                <div class="collage">
+                    <div id="collect4"></div>
+                    <div id="collect5"></div>
+                    <div id="collect6"></div>
+                </div>
+
+    <!-- capture insight -->
+                <div class="ccctxt">
+                    <p class="bold" id="capture">Capture insight</p>
+                    <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>     
+                </div>  
+
+                <div class="frame" id="frame1"></div>
+
+    <!-- quote box -->
+                <div class="quotebox">
+                    <p id="quote">Hope sees the invisible, feels the intangible, and achieves the impossible.
+                    <br>-Helen Keller</p>
+                </div>
+
+    <!-- create experience -->
+                <div class="ccctxt">
+                    <p class="bold" id="create">Create experience</p>
+                    <p class="light">wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                        wave is speaker for everyone with which the user can watch, touch, and listen to the music. It visualizes tune, thereby expanding music experience for the hearing impaired.
+                    </p>     
+                </div>  
+
+                <div class="collage">
+                    <div id="create1"></div>
+                    <div id="create2"></div>
+                    <div id="create3"></div>
+                </div>
+                <div class="collage">
+                    <div id="create4"></div>
+                    <div id="create5"></div>
+                    <div id="create6"></div>
+                </div>
+                <div class="collage">
+                    <div id="create7"></div>
+                    <div id="create8"></div>
+                    <div id="create9"></div>
+                </div>
+
+                <div class="frame" id="frame2"></div>
+            </div>
+
+            <!-- user voice -->
+            <div class="userbox">
+                <div class="user"></div>
+                <div id="usertext">letter excerpt from one of our users</div>
+            </div>
+
+            <!-- thank you gif -->
+            <div class="thankyoubox">
+                <div class="thankyou"></div>
+            </div>
+
+            <!-- outro -->
+            <div class="sub large" id="outro">
+                <div class="dummy_outro">
+                    <p class="outrotxt">Project: wave, a speaker for everyone
+                        <br>Period: mar 2017 - mar 2018
+                        <br>Team: Yi-Yujin, Kim-Taeil
+                        <br>Role: UX research, interview, product modeling and rendering, branding
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
