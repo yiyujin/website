@@ -95,4 +95,24 @@
     .thankyou{width: 150px; height: 150px;}
     .outrotxt{font-size: 8px !important; line-height: 10px; width: 50%;}
   }
-  
+
+
+  /* tablet */
+  @media only screen and (max-width: 1024px){
+    header{left: 7vw;}
+    .arrow{display: none;}
+    .video{height: 500px !important;}
+    #sec-projects, .project{top: 25vh !important;}
+
+    /* works */
+    .workshtml{top: 0px !important;}
+
+    /* library */
+    .fix{overflow: hidden;}
+    .quotep p{margin: 0px;}
+    .quotepbold{font-size: 10px !important;}
+
+    /* experience */
+    .quote{font-size: 12px !important; line-height: 14px !important;}
+
+  }
