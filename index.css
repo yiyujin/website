@@ -1,6 +1,25 @@
 .header-logo_small{display: none;}
 
-@media only screen and (max-width:640px) {
+/* tablet */
+@media only screen and (max-width: 1024px){
+    header{left: 7vw;}
+    .arrow{display: none;}
+    .video{height: 500px !important;}
+    #sec-projects, .project{top: 25vh !important;}
+
+    /* works */
+    .workshtml{top: 0px !important;}
+
+    /* library */
+    .fix{overflow: hidden;}
+    .quotep p{margin: 0px;}
+    .quotepbold{font-size: 10px !important;}
+
+    /* experience */
+    .quote{font-size: 12px !important; line-height: 14px !important;}
+}
+
+@media only screen and (max-width:600px) {
     header{left: 10px; top: 10px; height:10% !important; position: absolute;}
     .header-logo{background-image: url('src/logo_small.png') !important; width: 30px !important; height: 30px !important;}
     .topnav, .topnav>div{
@@ -94,25 +113,4 @@
 
     .thankyou{width: 150px; height: 150px;}
     .outrotxt{font-size: 8px !important; line-height: 10px; width: 50%;}
-  }
-
-
-  /* tablet */
-  @media only screen and (max-width: 1024px){
-    header{left: 7vw;}
-    .arrow{display: none;}
-    .video{height: 500px !important;}
-    #sec-projects, .project{top: 25vh !important;}
-
-    /* works */
-    .workshtml{top: 0px !important;}
-
-    /* library */
-    .fix{overflow: hidden;}
-    .quotep p{margin: 0px;}
-    .quotepbold{font-size: 10px !important;}
-
-    /* experience */
-    .quote{font-size: 12px !important; line-height: 14px !important;}
-
-  }
+}
