@@ -104,7 +104,10 @@
         .p5_single1{background-image:url("src/works_thumbnail/han_1.jpg");}
         .p5_single2{background-image:url("src/works_thumbnail/han_2.jpg");}
         .p5_single3{background-image:url("src/works_thumbnail/sap.jpg");}
-        .p5_single4{background-image:url("src/works_thumbnail/note.jpg");}
+        .p5_single4{background-image:url("src/works_thumbnail/wfootball.jpg");}
+
+/* Proejct 6 */
+        .p6_double{background-image:url("src/works_thumbnail/mp_1.jpg");}
 
         
         /* @media screen and (max-width: 768px){

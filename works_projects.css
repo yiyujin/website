@@ -210,9 +210,14 @@
             width: 300px;
             height: 300px;
             }
+        
+        .thankyou_special{
+            width: 600px;
+            height:300px;
+        }
 
         .dummy_outro{
-            padding-top:30%;
+            padding-top:10%;
         }
 
         .outrotxt{

@@ -27,40 +27,6 @@
 
     <script ></script>
 
-    <script>
-        function displayOne() {
-            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb1.jpg)';
-            document.getElementById("thumb1").style.opacity='1';
-            document.getElementById("thumb2").style.opacity='.3';
-            document.getElementById("thumb3").style.opacity='.3';
-            document.getElementById("thumb4").style.opacity='.3';
-        }
-
-        function displayTwo() {
-            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb2.jpg)';
-            document.getElementById("thumb1").style.opacity='.3';
-            document.getElementById("thumb2").style.opacity='1';
-            document.getElementById("thumb3").style.opacity='.3';
-            document.getElementById("thumb4").style.opacity='.3';
-            }
-
-        function displayThree() {
-            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb3.jpg)';
-            document.getElementById("thumb1").style.opacity='.3';
-            document.getElementById("thumb2").style.opacity='.3';
-            document.getElementById("thumb3").style.opacity='1';
-            document.getElementById("thumb4").style.opacity='.3';
-            }
-
-        function displayFour() {
-            document.getElementById("gallerymain").style.backgroundImage ='url(works/gg/thumb4.jpg)';
-            document.getElementById("thumb1").style.opacity='.3';
-            document.getElementById("thumb2").style.opacity='.3';
-            document.getElementById("thumb3").style.opacity='.3';
-            document.getElementById("thumb4").style.opacity='1';
-            }
-    </script>
-
     <!-- background image url -->
     <style>
     .mainimage{background-image: url('works/gg/main1.gif');}
@@ -170,7 +136,7 @@ $(function() {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
     
-        if (scroll >= 4000 ) {
+        if (scroll >= 8000 ) {
             works.removeClass('nav_collect').addClass("nav_collect-alt");
         } else {
             works.removeClass("nav_collect-alt").addClass('nav_collect');
@@ -183,7 +149,7 @@ $(function() {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
     
-        if (scroll >= 4600 ) {
+        if (scroll >= 9000 ) {
             works.removeClass('nav_capture').addClass("nav_capture-alt");
         } else {
             works.removeClass("nav_capture-alt").addClass('nav_capture');
@@ -196,7 +162,7 @@ $(function() {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
     
-        if (scroll >= 5200 ) {
+        if (scroll >= 9200 ) {
             works.removeClass('nav_create').addClass("nav_create-alt");
         } else {
             works.removeClass("nav_create-alt").addClass('nav_create');
@@ -269,7 +235,9 @@ $(function() {
 
             <div class="brieftext middle">
                 <p class="bold">Web</p>
-                <p class="light">Grad Gift is delivered to each student with a link and a personal letter.</p>       
+                <p class="light">Grad Gift is delivered to each student with a link and a personal letter.
+                    <a href="https://yiyujin.github.io/gradgift/" target="_blank">Press to open Link</a>
+                </p>       
             </div>
 
     <!-- sub2 -->

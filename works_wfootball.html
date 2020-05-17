@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="works_projects.css">    
+   
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+
+    <script ></script>
+
+    <script>
+        function displayOne() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wfootball/thumb1.jpg)';
+            document.getElementById("thumb1").style.opacity='1';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+        }
+
+        function displayTwo() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wfootball/thumb2.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='1';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayThree() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wfootball/thumb3.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='1';
+            document.getElementById("thumb4").style.opacity='.3';
+            }
+
+        function displayFour() {
+            document.getElementById("gallerymain").style.backgroundImage ='url(works/wfootball/thumb4.jpg)';
+            document.getElementById("thumb1").style.opacity='.3';
+            document.getElementById("thumb2").style.opacity='.3';
+            document.getElementById("thumb3").style.opacity='.3';
+            document.getElementById("thumb4").style.opacity='1';
+            }
+    </script>
+
+    <!-- background image url -->
+    <style>
+    .mainimage{background-image: url('works/wfootball/main1.gif');}
+    
+    #sub1{background-image:url("works/wfootball/storyboard.jpg");}
+
+    #frame1{height: 1200px !important; width: 100% !important;}
+    #frame1{background-image:url("works/wfootball/frame.jpg");}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works nav-active"><a href="works.html">Works</a></li>
+
+                <hr class="hr_w">
+
+                <li class="titleli">Woman and Sports are<br>Inseparable</li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <div class="all">
+        <div class="alls">
+            <div class="main">
+                <div class="mainimage"></div>
+            </div>
+
+    <!-- brief text -->
+            <div class="brieftext large">
+                <p class="bold">Woman and Sports are Inseparable</p>
+                <p class="light">This short clip is made to promote women's football.<br>KFA 여자축구 동영상 페스티벌 수상작</p>       
+            </div>
+    
+    <!-- collage -->
+            <div class="frame" id="frame1"></div>
+
+    <!-- video -->
+            <iframe class="sub large video" src="https://www.youtube.com/embed/cVeOcY0VU2o" controls>
+                <div class="dummy"></div>
+            </iframe>
+
+    <!-- outro -->
+            <div class="sub large" id="outro">
+                <div class="dummy_outro">
+                    <p class="outrotxt">Project: Woman and Sports are Inseparable
+                        <br>Period: sep 2018
+                        <br>Team: personal work
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

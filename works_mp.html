@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- 이 부분은 디폴트 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yiyu.design</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="src/fabicon.jpg" />
+    
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://yujin.design" />
+    <meta property="og:title" content="yiyu.design" />
+    <meta property="og:description" content="yi-yujin's portfolio" />
+    <meta property="og:image" content="https://agitated-hugle-e5369f.netlify.com/src/thumbnail.jpg" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="works_projects.css">    
+
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- background image url -->
+    <style>
+    .mainimage{background-image: url('works/mp/main1.jpg');}
+
+    #sub1{background-image:url("works/mp/sub1.jpg");}
+
+/* 추가 */
+    .dummy{padding-top: 400% !important;}
+
+    .thankyou{background-image: url("works/mp/thankyou.jpg"); background-size: 80% !important;}
+
+    </style>
+
+
+<script>
+    // 복붙 http://jsfiddle.net/4dgaurav/JqU2T/75/
+    $(document).ready(function () {
+    var divs = $('.container');
+    var dir = 'up'; // wheel scroll direction
+    var div = 0; // current div
+    $(document.body).on('DOMMouseScroll mousewheel', function (e) {
+        if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+            dir = 'down';
+        } else {
+            dir = 'up';
+        }
+        // find currently visible div :
+        div = -1;
+        divs.each(function(i){
+            if (div<0 && ($(this).offset().top >= $(window).scrollTop())) {
+                div = i;
+            }
+        });
+        if (dir == 'up' && div > 0) {
+            div--;
+        }
+        if (dir == 'down' && div < divs.length) {
+            div++;
+        }
+        //console.log(div, dir, divs.length);
+        $('html,body').stop().animate({
+            scrollTop: divs.eq(div).offset().top
+        }, 200);
+        return false;
+    });
+    $(window).resize(function () {
+        $('html,body').scrollTop(divs.eq(div).offset().top);
+    });
+});
+</script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <ul class="topnav">
+                <a href="index.html">
+                    <div class="header-logo"></div>
+                </a>
+
+                <li class="works nav-active"><a href="works.html">Works</a></li>
+
+                <hr class="hr_w">
+
+                <li class="titleli">Memories Player</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <div class="all">
+        <div class="alls">
+            <div class="main">
+                <div class="mainimage"></div>
+            </div>
+
+    <!-- brief text -->
+            <div class="brieftext large">
+                <p class="bold">You are what you listen to.</p>
+                <p class="light">Memories Player analyzes users' emotions based on their music data and creates monthly playlist. As the album represents a summary of users' music history, users can play the music to reflect back on their memories.</p>       
+            </div>
+
+    <!-- sub1 -->
+            <div class="sub large" id="sub1">
+                <div class="dummy"></div>        
+            </div>
+
+            <!-- thank you gif -->
+            <div class="thankyoubox">
+                <div class="thankyou"></div>
+            </div>
+
+            <!-- outro -->
+            <div class="sub large" id="outro">
+                <div class="dummy_outro">
+                    <p class="outrotxt">Project: Memories Player
+                        <br>Period: oct 2019
+                        <br>Team: personal work
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
